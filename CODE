@@ -1,0 +1,47 @@
+@DrakeBoff ➜ /workspaces/LastMinute_Fa23 (main) $ #include <Servo.h>
+Servo MyServo;
+const int buttonpin = 2;
+const int buttonPin = 3;
+const int ButtonPin = 4;
+const int buttonPin5 = 5;
+const int buttonPin11 = 11;
+
+
+void setup() {
+  myservo.attach(8);
+  myServo.attach(9);
+  MyServo.attach(10);
+  pinMode(buttonpin, INPUT);
+  pinMode(buttonPin, INPUT);
+ pinMode(ButtonPi@DrakeBoff ➜ /workspaces/LastMinute_Fa23 (main) $ 
+n, INPUT);
+ pinMode(buttonPin5, INPUT);
+ pinMode(buttonPin11, OUTPUT);
+}
+
+void loop() {
+
+  // Cabinet 2 & 8 //
+  if (digitalRead(buttonpin) == HIGH) {
+    myservo.write(90);
+  } else {
+    myservo.write(0);
+  }
+
+  // Concession 3 & 9//
+  if (digitalRead(buttonPin) == HIGH) {
+    myServo.write(140);
+  } else {
+    myServo.write(0);
+  //Bottle 4 & 10//
+  }
+  if (digitalRead(ButtonPin) == HIGH) {
+    MyServo.write(180);
+  } else {
+    MyServo.write(0);
+  }
+if (digitalRead(buttonPin5) == LOW) {
+    digitalWrite(buttonPin11, LOW);
+  } else {
+    digitalWrite(buttonPin11, HIGH);  
+    }
